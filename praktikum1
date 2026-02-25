@@ -12,12 +12,15 @@
 
     <h2>Kalculator Sederhana</h2>
     
-    <input type="number" id="bil1" placeholder="Angka 1">
-    <input type="number" id="bil2" placeholder="Angka 2">
+    <input type="number" id="bil1" placeholder="Masukkan Angka">
+    <input type="number" id="bil2" placeholder="Masukkan Angka">
     <br><br>
-    <button onclick="tambah()">Tambah (+)</button>
+
+    <button style="padding: 15px 40px; font-size: 18px; font-weight: bold; color: white; background-color: #e74c3c; border: none; border-radius: 10px; box-shadow: 0 8px #c0392b; cursor: pointer; transition: all 0.1s;" onmouseover="this.style.transform='translateY(2px)'; this.style.boxShadow='0 6px #c0392b';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px #c0392b';" onclick="tambah()">
+    Tambah (+)
+    </button>
     
-    <h3 id="hasil">Hasil: -</h3>
+    <h3 id="hasil">Hasil = -</h3>
 
     <script>
         function tambah() {
@@ -25,6 +28,25 @@
             var b = document.getElementById("bil2").value;
             var hasil = parseFloat(a) + parseFloat(b);
             document.getElementById("hasil").innerText = "Hasil: " + hasil;
+        }
+    </script>
+
+    <input type="number" id="bil3" placeholder="Masukkan Angka">
+    <input type="number" id="bil4" placeholder="Masukkan Angka">
+    <br><br>
+
+    <button style="padding: 15px 40px; font-size: 18px; font-weight: bold; color: white; background-color: #e74c3c; border: none; border-radius: 10px; box-shadow: 0 8px #c0392b; cursor: pointer; transition: all 0.1s;" onmouseover="this.style.transform='translateY(2px)'; this.style.boxShadow='0 6px #c0392b';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px #c0392b';" onclick="kurang()">
+    Kurang (-)
+    </button>
+    
+    <h3 id="hasil2">Hasil = -</h3>
+
+    <script>
+        function kurang() {
+            var c = document.getElementById("bil3").value;
+            var d = document.getElementById("bil4").value;
+            var hasil2 = parseFloat(c) - parseFloat(d);
+            document.getElementById("hasil2").innerText = "Hasil: " + hasil2;
         }
     </script>
 
